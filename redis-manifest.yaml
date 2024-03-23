@@ -25,14 +25,14 @@ spec:
           - name: REDIS_PASS
             valueFrom:
               secretKeyRef:
-                name: redis-secrets-sean
+                name: redis-secrets-giacomo
                 key: REDIS_PASS
           volumeMounts:
-            - name: redis-sean-volume
+            - name: redis-giacomo-volume
               mountPath: /data
   volumeClaimTemplates:
   - metadata:
-      name: redis-sean-volume
+      name: redis-giacomo-volume
     spec:
       accessModes:
         - ReadWriteOnce
